@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+    "pattern": [
+        "###",
+        "#P#",
+        "###"
+    ],
+  "key": {
+    "#": {
+        "item": "tutorialmod:pizza"
+    },
+    "P": {
+        "item": "tutorialmod:penjamin"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:sapphire_block"
+  }
+}
