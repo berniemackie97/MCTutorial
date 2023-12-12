@@ -23,10 +23,23 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
+        this.dropSelf(ModBlocks.SAPPHIRE_STAIRS.get());
+        this.dropSelf(ModBlocks.SAPPHIRE_BUTTON.get());
+        this.dropSelf(ModBlocks.SAPPHIRE_TRAP_DOOR.get());
+        this.dropSelf(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.SAPPHIRE_FENCE.get());
+        this.dropSelf(ModBlocks.SAPPHIRE_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.SAPPHIRE_WALL.get());
 
         this.add(ModBlocks.SOUND_BLOCK.get(),
                 (block) -> createOreDrop(block, ModItems.PIZZA.get())
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F))));
+
+        this.add(ModBlocks.SAPPHIRE_SLAB.get(),
+                (block) -> createSlabItemTable(ModBlocks.SAPPHIRE_SLAB.get()));
+
+        this.add(ModBlocks.SAPPHIRE_DOOR.get(),
+                (block) -> createDoorTable(ModBlocks.SAPPHIRE_DOOR.get()));
     }
 
     @Override

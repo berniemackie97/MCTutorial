@@ -3,6 +3,7 @@ package com.bernie.tutorialmod.item;
 import com.bernie.tutorialmod.TutorialMod;
 import com.bernie.tutorialmod.item.custom.FuelItem;
 import com.bernie.tutorialmod.item.custom.MetalDetectorItem;
+import com.bernie.tutorialmod.item.custom.SmokeableItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -15,8 +16,10 @@ public class ModItems {
         DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Item> PENJAMIN = ITEMS.register("penjamin",
-            () -> new Item(new Item.Properties()));
+            () -> new SmokeableItem(new Item.Properties().rarity(net.minecraft.world.item.Rarity.EPIC)));
 
+    public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza",
             () -> new FuelItem(new Item.Properties().food(ModFoods.PIZZA), 400));
 

@@ -25,13 +25,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_BLOCK.get(),
                         ModBlocks.RAW_SAPPHIRE_BLOCK.get(),
                         ModBlocks.SOUND_BLOCK.get())
-                .addTag(Tags.Blocks.ORES);
+                .addTag(Tags.Blocks.ORES
+            );
 
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.RAW_SAPPHIRE_BLOCK.get(),
                         ModBlocks.SAPPHIRE_BLOCK.get(),
-                        ModBlocks.SOUND_BLOCK.get());
+                        ModBlocks.SOUND_BLOCK.get(),
+                        ModBlocks.SAPPHIRE_SLAB.get(),
+                        ModBlocks.SAPPHIRE_STAIRS.get()
+            );
 
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -39,6 +43,18 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.SAPPHIRE_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.SAPPHIRE_FENCE_GATE.get());
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.SAPPHIRE_WALL.get());
+
+        this.tag(BlockTags.SLABS)
+                .add(ModBlocks.SAPPHIRE_SLAB.get());
 
     }
 }
