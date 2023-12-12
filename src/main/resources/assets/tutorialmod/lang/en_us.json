@@ -8,5 +8,8 @@
   "block.tutorialmod.raw_sapphire_block": "Raw Sapphire Block",
   "block.tutorialmod.sound_block": "Sound Block",
 
+  "tooltip.tutorialmod.metal_detector.tooltip": "Finds Valuables Underground",
+  "tooltip.tutorialmod.sound_block.tooltip": "Plays a Sound",
+
   "creativetab.tutorial_tab": "Tutorial Mod"
 }
