@@ -4,7 +4,7 @@ import com.bernie.tutorialmod.TutorialMod;
 import com.bernie.tutorialmod.item.custom.FuelItem;
 import com.bernie.tutorialmod.item.custom.MetalDetectorItem;
 import com.bernie.tutorialmod.item.custom.SmokeableItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,6 +25,17 @@ public class ModItems {
 
     public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
             () -> new FuelItem(new Item.Properties(), 400));
+    public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
+            () -> new SwordItem(ModToolTiers.SAPPHIRE, 15, 4, new Item.Properties()));
+
+    public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.SAPPHIRE, 15, 4, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe",
+            () -> new AxeItem(ModToolTiers.SAPPHIRE, 15, 4, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel",
+            () -> new ShovelItem(ModToolTiers.SAPPHIRE, 15, 4, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
+            () -> new HoeItem(ModToolTiers.SAPPHIRE, 15, 4, new Item.Properties()));
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));
