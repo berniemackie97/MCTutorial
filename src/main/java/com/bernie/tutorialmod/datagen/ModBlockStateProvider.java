@@ -2,6 +2,7 @@ package com.bernie.tutorialmod.datagen;
 
 import com.bernie.tutorialmod.TutorialMod;
 import com.bernie.tutorialmod.block.ModBlocks;
+import com.bernie.tutorialmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;

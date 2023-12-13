@@ -5,6 +5,11 @@ import com.bernie.tutorialmod.block.ModBlocks;
 import com.bernie.tutorialmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -31,6 +36,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .pattern("###")
                 .define('#', ModItems.PIZZA.get())
+                .unlockedBy(getHasName(ModItems.PIZZA.get()), has(ModItems.PIZZA.get()))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SAPPHIRE_PICKAXE.get())
+                .pattern("###")
+                .pattern(" X ")
+                .pattern(" X ")
+                .define('#', ModItems.PIZZA.get())
+                .define('X', Items.STICK)
+                .unlockedBy(getHasName(ModItems.PIZZA.get()), has(ModItems.PIZZA.get()))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SAPPHIRE_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" | ")
+                .pattern(" | ")
+                .define('#', ModItems.PIZZA.get())
+                .define('|', Items.STICK)
+                .unlockedBy(getHasName(ModItems.PIZZA.get()), has(ModItems.PIZZA.get()))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SAPPHIRE_AXE.get())
+                .pattern("## ")
+                .pattern("#| ")
+                .pattern(" | ")
+                .define('#', ModItems.PIZZA.get())
+                .define('|', Items.STICK)
+                .unlockedBy(getHasName(ModItems.PIZZA.get()), has(ModItems.PIZZA.get()))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SAPPHIRE_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" | ")
+                .define('#', ModItems.PIZZA.get())
+                .define('|', Items.STICK)
                 .unlockedBy(getHasName(ModItems.PIZZA.get()), has(ModItems.PIZZA.get()))
                 .save(recipeOutput);
 
