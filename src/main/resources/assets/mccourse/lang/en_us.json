@@ -19,6 +19,9 @@
   "creativetab.course_tab_2": "Course Tab 2",
   "creativetab.course_tab_food": "Course Food Tab",
 
-  "item.mccourse.metal_detector.no_valuable_found": "No valuables Found"
+  "item.mccourse.metal_detector.no_valuable_found": "No valuables Found",
+  "tooptip.mccourse.metal_detector.tooltip_shift": "Right click to scan for valuables",
+  "tooltip.mccourse.metal_detector.tooltip": "§bShift§r for more info",
+  "tooltip.mccourse.sound_block.tooltip": "Plays sound"
 
 }
