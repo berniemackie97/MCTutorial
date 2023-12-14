@@ -41,6 +41,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get()))
                 .save(recipeOutput);
 
+        stairs(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALEXANDRITE_STAIRS.get(), ModBlocks.ALEXANDRITE_BLOCK.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALEXANDRITE_SLAB.get(), ModBlocks.ALEXANDRITE_BLOCK.get());
         nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.RAW_ALEXANDRITE.get(), RecipeCategory.MISC, ModBlocks.RAW_ALEXANDRITE_BLOCK.get(),
                 "mccourse:raw_alexandrite", "alexandrite", "mccourse:raw_alexandrite_block", "alexandrite");
         oreSmelting(recipeOutput, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.7f, 200, "alexandrite");
@@ -62,6 +64,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(pUnpacked), has(pUnpacked))
                 .save(pRecipeOutput, new ResourceLocation(pPackedName));
     }
+
+    private static void oreCooking(RecipeOutput pRecipeOutput, RecipeSerializer<? extends AbstractCookingRecipe> pSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix) {
+        Iterator var9 = pIngredients.iterator();
+
+        while(var9.hasNext()) {
+            ItemLike itemlike = (ItemLike)var9.next();
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pSerializer)
+                    .group(pGroup)
+                    .unlockedBy(getHasName(itemlike), has(itemlike))
+                    .save(pRecipeOutput, MCCourseMod.MOD_ID + ":" + getItemName(pResult) + pSuffix + "_" + getItemName(itemlike));
+        }
+
+    }
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
         oreCooking(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
     }
@@ -70,17 +85,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreCooking(pRecipeOutput, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
     }
 
-    private static void oreCooking(RecipeOutput pRecipeOutput, RecipeSerializer<? extends AbstractCookingRecipe> pSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix) {
-        Iterator var9 = pIngredients.iterator();
-
-        while(var9.hasNext()) {
-            ItemLike itemlike = (ItemLike)var9.next();
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(new ItemLike[]{itemlike}), pCategory, pResult, pExperience, pCookingTime, pSerializer)
-                    .group(pGroup)
-                    .unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pRecipeOutput, MCCourseMod.MOD_ID + ":" + getItemName(pResult) + pSuffix + "_" + getItemName(itemlike));
-        }
-
+    protected static void stairs(RecipeOutput pRecipeOutput, RecipeCategory pCategory, ItemLike pStairs, ItemLike pMaterial) {
+        stairsBuilder(pCategory, pStairs, Ingredient.of(pMaterial)).unlockedBy(getHasName(pMaterial), has(pMaterial)).save(pRecipeOutput);
+    }
+    protected static RecipeBuilder stairsBuilder(RecipeCategory pCategory, ItemLike pStairs, Ingredient pMaterial) {
+        return ShapedRecipeBuilder.shaped(pCategory, pStairs, 4)
+                .define('#', pMaterial)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###");
     }
 }
 
