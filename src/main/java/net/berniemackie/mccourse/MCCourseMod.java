@@ -1,6 +1,7 @@
 package net.berniemackie.mccourse;
 
 import com.mojang.logging.LogUtils;
+import net.berniemackie.mccourse.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -41,6 +42,10 @@ public class MCCourseMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+
+
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -70,7 +75,11 @@ public class MCCourseMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        {
+            event.accept(ModItems.ALEXANDRITE);
+            event.accept(ModItems.RAW_ALEXANDRITE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
