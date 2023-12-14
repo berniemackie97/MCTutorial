@@ -1,6 +1,7 @@
 package net.berniemackie.mccourse.item;
 
 import net.berniemackie.mccourse.MCCourseMod;
+import net.berniemackie.mccourse.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
             () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().rarity(Rarity.EPIC).durability(512)));
 
     public static void register(IEventBus eventBus) {
         // Register the DeferredRegister to the event bus
