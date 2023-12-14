@@ -34,6 +34,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SOUND_BLOCK.get())
                 .add(ModBlocks.NETHER_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.END_STONE_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get())
+                .add(ModBlocks.ALEXANDRITE_SLAB.get())
                 .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
