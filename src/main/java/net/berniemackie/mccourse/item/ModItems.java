@@ -1,6 +1,7 @@
 package net.berniemackie.mccourse.item;
 
 import net.berniemackie.mccourse.MCCourseMod;
+import net.berniemackie.mccourse.item.custom.FuelItem;
 import net.berniemackie.mccourse.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -27,6 +28,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> KOHLRABI = ITEMS.register("kohlrabi",
             () -> new Item(new Item.Properties().rarity(Rarity.EPIC).food(ModFoodProperties.KOHLRABI)));
+
+    public static final RegistryObject<Item> PEAT_BRICK = ITEMS.register("peat_brick",
+            () -> new FuelItem(new Item.Properties(), 200));
 
     public static void register(IEventBus eventBus) {
         // Register the DeferredRegister to the event bus
