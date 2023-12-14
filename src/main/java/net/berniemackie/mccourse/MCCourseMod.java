@@ -2,6 +2,7 @@ package net.berniemackie.mccourse;
 
 import com.mojang.logging.LogUtils;
 import net.berniemackie.mccourse.block.ModBlocks;
+import net.berniemackie.mccourse.item.ModCreativeModeTabs;
 import net.berniemackie.mccourse.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -42,6 +43,8 @@ public class MCCourseMod
     public MCCourseMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
