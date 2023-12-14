@@ -3,9 +3,7 @@ package net.berniemackie.mccourse.datagen;
 import net.berniemackie.mccourse.MCCourseMod;
 import net.berniemackie.mccourse.block.ModBlocks;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -37,6 +35,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //       Slab blocks
         slabBlock((SlabBlock) ModBlocks.ALEXANDRITE_SLAB.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
         blockItem(ModBlocks.ALEXANDRITE_SLAB);
+
+//      Button blocks
+        buttonBlock((ButtonBlock) ModBlocks.ALEXANDRITE_BUTTON.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+        blockItem(ModBlocks.ALEXANDRITE_BUTTON);
+
+//      Pressure Plate blocks
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+        blockItem(ModBlocks.ALEXANDRITE_PRESSURE_PLATE);
+
 
     }
 

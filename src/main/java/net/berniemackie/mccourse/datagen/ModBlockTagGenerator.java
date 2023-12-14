@@ -36,7 +36,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.END_STONE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.ALEXANDRITE_STAIRS.get())
                 .add(ModBlocks.ALEXANDRITE_SLAB.get())
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
                 .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
+
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
