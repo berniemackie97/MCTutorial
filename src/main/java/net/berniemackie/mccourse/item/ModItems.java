@@ -25,6 +25,9 @@ public class ModItems {
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().rarity(Rarity.EPIC).durability(512)));
 
+    public static final RegistryObject<Item> KOHLRABI = ITEMS.register("kohlrabi",
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC).food(ModFoodProperties.KOHLRABI)));
+
     public static void register(IEventBus eventBus) {
         // Register the DeferredRegister to the event bus
         ITEMS.register(eventBus);

@@ -42,6 +42,15 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> COURSE_TAB_FOOD = CREATIVE_MODE_TABS.register("course_tab_food",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.KOHLRABI.get()))
+                    .title(Component.translatable("creativetab.course_tab_food"))
+                    .displayItems((displayParameters, output) -> {
+                        output.accept(ModItems.KOHLRABI.get());
+                    })
+                    .build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }
