@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+      "###",
+      "###",
+      "###"
+  ],
+  "key": {
+      "#": {
+          "item": "mccourse:alexandrite"
+      }
+  },
+  "result": {
+      "item": "mccourse:alexandrite_block",
+      "count": 1
+  }
+}
