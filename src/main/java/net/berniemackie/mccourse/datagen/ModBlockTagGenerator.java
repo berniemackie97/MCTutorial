@@ -37,6 +37,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_STAIRS.get())
                 .add(ModBlocks.ALEXANDRITE_SLAB.get())
                 .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
+                .add(ModBlocks.ALEXANDRITE_DOOR.get())
                 .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
@@ -59,6 +60,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
             .add(ModBlocks.ALEXANDRITE_WALL.get());
         this.tag(BlockTags.FENCE_GATES)
             .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+        this.tag(BlockTags.DOORS)
+                .add(ModBlocks.ALEXANDRITE_DOOR.get());
     }
 
     @Override
