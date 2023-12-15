@@ -28,6 +28,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.END_STONE_ALEXANDRITE_ORE);
         blockWithItem(ModBlocks.NETHER_ALEXANDRITE_ORE);
 
+
+//      Wall blocks
+        wallBlock((WallBlock) ModBlocks.ALEXANDRITE_WALL.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+
+//      Fence blocks
+        fenceBlock((FenceBlock) ModBlocks.ALEXANDRITE_FENCE.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+
+//      Button blocks
+        buttonBlock((ButtonBlock) ModBlocks.ALEXANDRITE_BUTTON.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+
 //       Stair blocks
         stairsBlock((StairBlock) ModBlocks.ALEXANDRITE_STAIRS.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
         blockItem(ModBlocks.ALEXANDRITE_STAIRS);
@@ -36,14 +46,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.ALEXANDRITE_SLAB.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
         blockItem(ModBlocks.ALEXANDRITE_SLAB);
 
-//      Button blocks
-        buttonBlock((ButtonBlock) ModBlocks.ALEXANDRITE_BUTTON.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
-        blockItem(ModBlocks.ALEXANDRITE_BUTTON);
-
 //      Pressure Plate blocks
         pressurePlateBlock((PressurePlateBlock) ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
         blockItem(ModBlocks.ALEXANDRITE_PRESSURE_PLATE);
 
+//      Fence Gate blocks
+        fenceGateBlock((FenceGateBlock) ModBlocks.ALEXANDRITE_FENCE_GATE.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+        blockItem(ModBlocks.ALEXANDRITE_FENCE_GATE);
 
     }
 
