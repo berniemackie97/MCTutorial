@@ -62,6 +62,19 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> COURSE_TAB_TOOLS = CREATIVE_MODE_TABS.register("course_tab_tools",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.ALEXANDRITE_SWORD.get()))
+                    .title(Component.translatable("creativetab.course_tab_tools"))
+                    .displayItems((displayParameters, output) -> {
+
+                        output.accept(ModItems.ALEXANDRITE_SWORD.get());
+                        output.accept(ModItems.ALEXANDRITE_AXE.get());
+                        output.accept(ModItems.ALEXANDRITE_PICKAXE.get());
+                        output.accept(ModItems.ALEXANDRITE_HOE.get());
+                        output.accept(ModItems.ALEXANDRITE_SHOVEL.get());
+                    })
+                    .build());
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }

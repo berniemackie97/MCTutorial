@@ -21,6 +21,7 @@ public class ModTags {
 
     public static class Blocks {
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES = Tag("metal_detector_valuables");
+        public static final TagKey<Block> NEEDS_ALEXANDRITE_TOOL = Tag("needs_alexandrite_tool");
 
         private static TagKey<Block> Tag(String pName) {
             return BlockTags.create(new ResourceLocation(MCCourseMod.MOD_ID, pName));

@@ -33,6 +33,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.ALEXANDRITE_WALL, ModBlocks.ALEXANDRITE_BLOCK);
         fenceItem(ModBlocks.ALEXANDRITE_FENCE, ModBlocks.ALEXANDRITE_BLOCK);
 
+        handHeldItem(ModItems.ALEXANDRITE_SWORD);
+        handHeldItem(ModItems.ALEXANDRITE_PICKAXE);
+        handHeldItem(ModItems.ALEXANDRITE_SHOVEL);
+        handHeldItem(ModItems.ALEXANDRITE_AXE);
+        handHeldItem(ModItems.ALEXANDRITE_HOE);
+
         simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
     }
 
@@ -53,6 +59,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 mcLoc("block/fence_inventory"))
                 .texture("texture", new ResourceLocation(MCCourseMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder handHeldItem(RegistryObject<Item> item){
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(MCCourseMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item){
