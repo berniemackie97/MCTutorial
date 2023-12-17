@@ -38,6 +38,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handHeldItem(ModItems.ALEXANDRITE_SHOVEL);
         handHeldItem(ModItems.ALEXANDRITE_AXE);
         handHeldItem(ModItems.ALEXANDRITE_HOE);
+        handHeldItem(ModItems.ALEXANDRITE_PAXEL);
 
         simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
     }

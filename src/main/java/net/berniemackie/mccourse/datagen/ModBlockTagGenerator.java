@@ -58,6 +58,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SOUND_BLOCK.get())
                 .add(ModBlocks.NETHER_ALEXANDRITE_ORE.get());
 
+        this.tag(ModTags.Blocks.PAXEL_MINABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .addTag(BlockTags.MINEABLE_WITH_HOE)
+                .addTag(BlockTags.MAINTAINS_FARMLAND);
+
 
         this.tag(BlockTags.FENCES)
             .add(ModBlocks.ALEXANDRITE_FENCE.get());
