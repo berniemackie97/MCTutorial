@@ -1,10 +1,7 @@
 package net.berniemackie.mccourse.item;
 
 import net.berniemackie.mccourse.MCCourseMod;
-import net.berniemackie.mccourse.item.custom.FuelItem;
-import net.berniemackie.mccourse.item.custom.HammerItem;
-import net.berniemackie.mccourse.item.custom.MetalDetectorItem;
-import net.berniemackie.mccourse.item.custom.PaxelItem;
+import net.berniemackie.mccourse.item.custom.*;
 import net.berniemackie.mccourse.util.ModTags;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,7 +39,7 @@ public class ModItems {
 
 //tier, attackDamage Modifier, attackSpeed Modifier
     public static final RegistryObject<Item> ALEXANDRITE_SWORD = ITEMS.register("alexandrite_sword",
-            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 5, 3.0F,
+            () -> new SlowingSwordItem(ModToolTiers.ALEXANDRITE, 5, 3.0F,
                     new Item.Properties().durability(256).rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> ALEXANDRITE_PICKAXE = ITEMS.register("alexandrite_pickaxe",
