@@ -74,6 +74,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_HOE.get());
                         output.accept(ModItems.ALEXANDRITE_SHOVEL.get());
                         output.accept(ModItems.ALEXANDRITE_PAXEL.get());
+                        output.accept(ModItems.ALEXANDRITE_HAMMER.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {
