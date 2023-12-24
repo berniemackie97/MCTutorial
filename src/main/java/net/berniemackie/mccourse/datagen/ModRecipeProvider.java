@@ -6,7 +6,6 @@ import net.berniemackie.mccourse.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -66,10 +65,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     private static void oreCooking(RecipeOutput pRecipeOutput, RecipeSerializer<? extends AbstractCookingRecipe> pSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix) {
-        Iterator var9 = pIngredients.iterator();
 
-        while(var9.hasNext()) {
-            ItemLike itemlike = (ItemLike)var9.next();
+        for (ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pSerializer)
                     .group(pGroup)
                     .unlockedBy(getHasName(itemlike), has(itemlike))

@@ -76,10 +76,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_PAXEL.get());
                         output.accept(ModItems.ALEXANDRITE_HAMMER.get());
 
-                        output.accept(ModItems.ALEXANDRITE_HELMATE.get());
+                        output.accept(ModItems.ALEXANDRITE_HELMET.get());
                         output.accept(ModItems.ALEXANDRITE_CHESTPLATE.get());
                         output.accept(ModItems.ALEXANDRITE_LEGGINGS.get());
-                        output.accept(ModItems.ALEXANDRITE_BOOTs.get());
+                        output.accept(ModItems.ALEXANDRITE_BOOTS.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

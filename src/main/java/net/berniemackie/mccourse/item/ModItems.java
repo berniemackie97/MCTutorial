@@ -64,7 +64,7 @@ public class ModItems {
                     new Item.Properties().durability(556).rarity(Rarity.EPIC)));
 
 
-    public static final RegistryObject<Item> ALEXANDRITE_HELMATE = ITEMS.register("alexandrite_helmate",
+    public static final RegistryObject<Item> ALEXANDRITE_HELMET = ITEMS.register("alexandrite_helmet",
             () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(256).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> ALEXANDRITE_CHESTPLATE = ITEMS.register("alexandrite_chestplate",
@@ -73,7 +73,7 @@ public class ModItems {
     public static final RegistryObject<Item> ALEXANDRITE_LEGGINGS = ITEMS.register("alexandrite_leggings",
             () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(256).rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> ALEXANDRITE_BOOTs = ITEMS.register("alexandrite_boots",
+    public static final RegistryObject<Item> ALEXANDRITE_BOOTS = ITEMS.register("alexandrite_boots",
             () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(256).rarity(Rarity.EPIC)));
 
